@@ -1,0 +1,17 @@
+[project]
+name = "fa26-comp-672-reddy"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Vinay Reddy", email = "vreddy@rivier.edu" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+fa26-comp-672-reddy = "fa26_comp_672_reddy:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
