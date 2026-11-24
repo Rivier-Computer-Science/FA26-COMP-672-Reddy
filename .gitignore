@@ -1,3 +1,6 @@
+#Custom entries
+data/processed/*.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

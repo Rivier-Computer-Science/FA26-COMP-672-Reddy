@@ -1,0 +1,38 @@
+======================================================================
+GOEMOTIONS DETERMINISTIC 5-CLASS PREPROCESSING SUMMARY
+======================================================================
+Source Dataset : google-research-datasets/go_emotions (config: 'simplified')
+Output Folder  : C:\Vinay\SnLProcessing\Project\FA26-COMP-672-Reddy\data\processed/
+Resolution Rule: Within-group multi-labels retained; cross-group/unmapped
+                 discarded; Neutral (27) retained iff sole label ([27]).
+
+--- 1. DETERMINISTIC LABEL MAPPING (RAW_ID_TO_TARGET) ---
+  Target 0 [Joy    ] <- 1 (amusement), 13 (excitement), 17 (joy), 20 (optimism), 21 (pride), 23 (relief)
+  Target 1 [Anger  ] <- 2 (anger), 3 (annoyance), 10 (disapproval), 11 (disgust)
+  Target 2 [Sadness] <- 9 (disappointment), 12 (embarrassment), 16 (grief), 24 (remorse), 25 (sadness)
+  Target 3 [Fear   ] <- 14 (fear), 19 (nervousness)
+  Target 4 [Neutral] <- 27 (neutral)
+  Excluded [Unmapped] <- 0 (admiration), 4 (approval), 5 (caring), 6 (confusion), 7 (curiosity), 8 (desire), 15 (gratitude), 18 (love), 22 (realization), 26 (surprise)
+
+--- 2. SPLIT RETENTION & FILTERING BREAKDOWN ---
+     Split  Raw_Rows  Retained  Discarded_Empty  Discarded_Label_Conflict  Retention_%
+     train     43410     24858                0                     18552        57.26
+validation      5426      3101                0                      2325        57.15
+      test      5427      3127                0                      2300        57.62
+
+--- 3. CLASS COUNTS PER SPLIT ---
+     Split  Total  Joy  Anger  Sadness  Fear  Neutral
+     train  24858 4239   4929     2326   541    12823
+validation   3101  540    631      266    72     1592
+      test   3127  486    672      283    80     1606
+
+--- 4. CLASS DISTRIBUTION PERCENTAGES (SHOWING IMBALANCE) ---
+     Split    Joy  Anger Sadness  Fear Neutral
+     train 17.05% 19.83%   9.36% 2.18%  51.59%
+validation 17.41% 20.35%   8.58% 2.32%  51.34%
+      test 15.54% 21.49%   9.05% 2.56%  51.36%
+
+Note: Aggregating fine-grained labels does not balance class frequencies.
+Validation and test splits remain unresampled to reflect natural priors;
+training imbalance is handled via inverse-frequency class weights.
+======================================================================
