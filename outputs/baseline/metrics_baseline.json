@@ -1,0 +1,119 @@
+{
+  "model": "TF-IDF (1,2)-gram + Balanced Logistic Regression",
+  "seed": 42,
+  "best_C": 1.0,
+  "vocab_size": 25000,
+  "validation_tuning_logs": [
+    {
+      "C": 0.1,
+      "val_macro_f1": 0.6033,
+      "val_accuracy": 0.6443
+    },
+    {
+      "C": 0.5,
+      "val_macro_f1": 0.645,
+      "val_accuracy": 0.6788
+    },
+    {
+      "C": 1.0,
+      "val_macro_f1": 0.6545,
+      "val_accuracy": 0.6853
+    },
+    {
+      "C": 2.0,
+      "val_macro_f1": 0.6508,
+      "val_accuracy": 0.6853
+    },
+    {
+      "C": 5.0,
+      "val_macro_f1": 0.6516,
+      "val_accuracy": 0.683
+    }
+  ],
+  "test_macro_f1": 0.6439,
+  "test_accuracy": 0.6869,
+  "latency_ms_per_100_examples": 0.0622,
+  "oov_zero_token_test_examples": 13,
+  "per_class_report": {
+    "Joy": {
+      "precision": 0.7680851063829788,
+      "recall": 0.742798353909465,
+      "f1-score": 0.7552301255230126,
+      "support": 486.0
+    },
+    "Anger": {
+      "precision": 0.5566433566433566,
+      "recall": 0.5922619047619048,
+      "f1-score": 0.5739005046863734,
+      "support": 672.0
+    },
+    "Sadness": {
+      "precision": 0.5076452599388379,
+      "recall": 0.5865724381625441,
+      "f1-score": 0.5442622950819672,
+      "support": 283.0
+    },
+    "Fear": {
+      "precision": 0.5346534653465347,
+      "recall": 0.675,
+      "f1-score": 0.5966850828729282,
+      "support": 80.0
+    },
+    "Neutral": {
+      "precision": 0.7721268163804491,
+      "recall": 0.727895392278954,
+      "f1-score": 0.7493589743589744,
+      "support": 1606.0
+    },
+    "accuracy": 0.686920370962584,
+    "macro avg": {
+      "precision": 0.6278308009384314,
+      "recall": 0.6649056178225735,
+      "f1-score": 0.6438873965046512,
+      "support": 3127.0
+    },
+    "weighted avg": {
+      "precision": 0.6951791654185732,
+      "recall": 0.686920370962584,
+      "f1-score": 0.6900973869881583,
+      "support": 3127.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      361,
+      18,
+      15,
+      6,
+      86
+    ],
+    [
+      25,
+      398,
+      41,
+      16,
+      192
+    ],
+    [
+      14,
+      37,
+      166,
+      6,
+      60
+    ],
+    [
+      1,
+      9,
+      9,
+      54,
+      7
+    ],
+    [
+      69,
+      253,
+      96,
+      19,
+      1169
+    ]
+  ]
+}
