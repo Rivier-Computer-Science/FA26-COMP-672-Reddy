@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from transformers import AutoModel
-from .dataset import MODEL_NAME, MODEL_REVISION, get_tokenizer, validate_text_input
+from dataset import MODEL_NAME, MODEL_REVISION, get_tokenizer, validate_text_input
 
 
 class DistilBertEmotionClassifier(nn.Module):

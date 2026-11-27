@@ -5,7 +5,7 @@ from datasets import load_dataset
 import pandas as pd
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 DATA_DIR = PROJECT_ROOT / "data" / "processed"
 
@@ -213,7 +213,7 @@ def main():
     with open(SUMMARY_FILE, "w", encoding="utf-8") as f:
         f.write(report_text + "\n")
 
-    print(f"\nSaved CSV splits and summary report to: {OUTPUT_DIR}/")
+    print(f"\nSaved CSV splits and summary report to: {DATA_DIR}/")
 
 
 if __name__ == "__main__":

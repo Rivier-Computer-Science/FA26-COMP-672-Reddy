@@ -32,7 +32,7 @@
   ],
   "test_macro_f1": 0.6439,
   "test_accuracy": 0.6869,
-  "latency_ms_per_100_examples": 0.0622,
+  "latency_ms_per_100_examples": 0.0389,
   "oov_zero_token_test_examples": 13,
   "per_class_report": {
     "Joy": {
